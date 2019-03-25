@@ -38,7 +38,7 @@ Edit this document to include your answers after each question. Make sure to lea
 
 2. Name two big differences between ```display: block;``` and ```display: inline;```.
 
-    Dislpay block affects block level elements. Block level elements fill up space horizontally. Examples are <p> and <div>. Display inline affects elements that are contained only within block level elements and are considered to be within the "line" of a block level element. a good example would be a <span>.  
+    Display block affects block level elements. The items styled with display: block will be display in a column and will take up the width of the container they're in. Display: inline block will allow multiple block elements to be displayed in a row or "inline". 
 
 3. What are the 4 areas of the box model?
 
