@@ -10,48 +10,85 @@
   <link rel="stylesheet" href="./about-flex1.css">
 
 </head>
+<!-- missing body tag -- should surround your entire page like the head tag surrounds all the information about the page. The body surrounds all the stuff that we show the client. div.container should be a child of the body tag.  Hopefully this helps you with the overall structure of the page. I just think you have some things that are in the wrong place:-->
+
+<!-- <body>
+  <div class="container"> 
+    <header>
+      <img />
+      <nav />
+    </header>
+    <div class="middle-content">
+      <section>
+        <img />
+        <p />
+        <button />
+      </section>
+    </div>
+    <footer />
+  </div>
+</body>
+ -->
 
 <div class="comtainer">
+  <!-- typo on your class container...always look for typos! -->
+
+  <!-- header.about-header is a child of div.container so it should be tabbed over one more tab to indicate that -->
 <header class="about-header">
+    <!-- img.logo is a child of header -->
     <img class="logo"
     src="./img/lambda-black.png"
     alt="black lambda logo">
-
+    <!-- nav.top-nav  is a child of header-->
     <nav class= "top-nav">
+      <!-- These a tags are children of nav.top-nav -->
         <a class="link1" href="./index-flex1.html">Home</a>
+        <!-- about link links to wrong file - it would be correct if the file was named about.html -->
         <a class="link2" href="about.html">About</a>
         <a class="link3" href="#">Products</a>
         <a class="link4" href="#">Blog</a>
         <a class="link5" href="#">Contact</a>
-     </nav>
-
+    </nav>
+    <!-- ^^^ This is a good example of keeping your closing tags in line with the opening tags. When an element spans multipole lines you want to be sure that the closing tag is in line with opening tag. Helps spot mismatched tags faster.  -->
 </header>
-</div>
+<!-- This closing div tag closes the div.container you have going on in line 36 - I don't think that's what you want since that is your main container.  -->
+</div> 
 
+<!-- This body tag should be above the div.container tag in line 36. -->
 <body>
-<div class="middle-body">
-    <img class="about-divider" src="./img/jumbo-about.png" alt="jumbo-about">
-    <div class="container about-page">
-     
-  <section class="about">
-    <h2>About</h2>
 
+  <!-- div.middle-body is a child of div.container. It's opening and closing tags should be in line with the header.about-header tags you created above to indicate that they are siblings.  -->
+<div class="middle-body">
+  <!-- img.about-divider is a child of div.middle-body -->
+    <img class="about-divider" src="./img/jumbo-about.png" alt="jumbo-about">
+    <!-- not sure this div is needed.  -->
+    <div class="container about-page">
+    <!-- section.about is a child of div.middle-body. Should be in line with img.about-divider - they are siblings -->
+  <section class="about">
+    <!-- this h2 is a child of section.about -->
+    <h2>About</h2>
+    <!-- this p tag is a child of section.about -->
     <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
   </section> 
 
+  <!-- this is a toy problem, but I would name your classes such that they describe what their function is. I'm not entirely certain what "funky-mid" does LOL. It is a child of div.middle-body. I would rename it like class="card-container" or something to that effect -->
   <div class="funky-mid">
+    <!-- not sure why this div is here? -->
     <div>
+      <!-- section.top-midsection is a child of div.funky-mid. Tab it over so it looks like it should be a child. -->
   <section class="top-midsection">
+    <!-- the img here is a child of section. Make sure you tab it over to follow what section does after you edit section. It just needs to look like a child of section.top-midsection. -->
     <img src="img/about-plan.png" alt="strategy">
-    
+    <!-- the h2 here is a child of the section.top-midsection and should look as such. -->
    <h2>Strategy</h2>
-    
+    <!-- p tag is a child of section.top-midsection -->
    <p>Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
-
+    <!-- button is a child of section.top-midsection -->
     <button>Learn More</button> 
+    <!-- end section is missing. I would move the end div tag to after all your sections are done. -->
   </div>
 
-
+<!-- opening section tag is missing -->
     <img src="img/about-working.png" alt="strategy">
     
     <h2>How We Work</h2>
@@ -63,6 +100,21 @@
   </section>  
 
   <section class="middle-mid">
+
+    <!-- this section is exactly how all your other sections should look with the exception of the last image. I don't think it should be in this section. 
+      
+      <section> 
+        <img />
+        <h2 />
+        <p />
+        <button />
+      </section>
+
+      ^^^ this is how all your sections should look. 
+    
+    
+    
+    -->
     <img src="img/about-office.png" alt="strategy">
     
     <h2>Places We Work</h2>
@@ -76,6 +128,7 @@
 
   <section>
     
+    <!-- img should probably be moved here from line 126. otherwise this section is also perfect. -->
     <h2>Collaboration</h2>
     
     <p>Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
@@ -83,17 +136,20 @@
     <button>Learn More</button> 
 
   </section>
-</div>
+  <!-- this div closing tag should match the div opening tag before all of your sections that look like cards -->
+</div> 
 
+<!-- missing a div opening tag here -->
     <h2>Let's Work Together</h2>
 
     <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. 
     Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. 
     Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
   </div>
-        
+        <!-- this should be in line with all your other sibling elements -->
       <footer>
         <nav>
+          <!-- this filename does not match the filename you gave it. Be sure to spot the little details. Otherwise your code will be buggy -->
           <a href="index.html">Home</a>
           <a href="#">About</a>
           <a href="#">Products</a>
